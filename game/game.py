@@ -9,13 +9,16 @@ class Game:
 
     def handle_events(self):
         for event in pygame.event.get():
-            print(event.type)
             if event.type == pygame.QUIT:
                 self.running = False
-            if event.type == pygame.KEYDOWN:
-                self.running == False
+            elif event.type == pygame.KEYDOWN:
+                print(pygame.key.name(event.key))
+            elif event.type == pygame.KEYUP:
+                pass
+            elif event.type == pygame.MOUSEMOTION:
+                print(event.pos)
 
-    def update(slef):
+    def update(self):
         pass
     
     def draw(self):
@@ -28,4 +31,3 @@ class Game:
             self.update()
             self.draw()
             self.clock.tick(FPS)
-
