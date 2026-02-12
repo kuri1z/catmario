@@ -8,3 +8,9 @@ class Platform(pygame.sprite.Sprite):
         self.image.fill(PLATFORM_COLOR)
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
+        self.x = x
+        self.y = y
+
+    def draw(self, screen):
+        screen.blit(self.image, self.rect)
+
